@@ -11,9 +11,8 @@ import androidx.core.app.ActivityCompat;
 public class ManagerApeluri {
 
     private Context context;
-    private final String NUMAR_URGENTA = "0729143337"; // Pune numarul real aici
+    private final String NUMAR_URGENTA = "0729143337";
 
-    // Constructorul clasei
     public ManagerApeluri(Context context) {
         this.context = context;
     }

@@ -28,16 +28,16 @@ public class ManagerBaterie {
                 int scara = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
                 float procentBaterie = nivel * 100 / (float) scara;
 
-                // Verificam daca bateria a scazut la 10%
+
                 if (procentBaterie <= 10.0f && !alertaTrimisa) {
                     alertaTrimisa = true;
 
-                    Toast.makeText(context, "Baterie scazuta 10%! Se trimite locatia...", Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, "Baterie scazuta 10%! Se trimite locatia", Toast.LENGTH_LONG).show();
 
 
                     managerLocatie.preiaLocatiaSiTrimiteInCloud(null);
 
-                    // Activam modul de economisire
+
                     try {
                         Intent intentBaterie = new Intent(Settings.ACTION_BATTERY_SAVER_SETTINGS);
                         intentBaterie.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
